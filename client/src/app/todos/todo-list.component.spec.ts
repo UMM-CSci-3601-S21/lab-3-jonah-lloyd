@@ -47,18 +47,18 @@ describe('TodoListComponent', () => {
     TestBed.configureTestingModule({
       imports: [COMMON_IMPORTS],
       declarations: [TodoListComponent],
-      // providers:    [ UserService ]  // NO! Don't provide the real service!
+      // providers:    [ TodoService ]  // NO! Don't provide the real service!
       // Provide a test-double instead
-      // This MockerUserService is defined in client/testing/user.service.mock.
+      // This MockerTodoService is defined in client/testing/todo.service.mock.
       providers: [{ provide: TodoService, useValue: new MockTodoService() }]
     });
   });
 
   beforeEach(waitForAsync(() => {
     TestBed.compileComponents().then(() => {
-      // Create a "fixture" of the UserListComponent. that
+      // Create a "fixture" of the TodoListComponent. that
       // allows us to get an instance of the component
-      // (userList, below) that we can "control" in
+      // (todoList, below) that we can "control" in
       // the tests.
       fixture = TestBed.createComponent(TodoListComponent);
       todoList = fixture.componentInstance;
