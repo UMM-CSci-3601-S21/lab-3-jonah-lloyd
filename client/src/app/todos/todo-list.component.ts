@@ -20,7 +20,6 @@ export class TodoListComponent implements OnInit {
   // public todoOwner: string;
   public todoOwner: string;
   public todoStatus: boolean;
-  public todoCompany: string;
   public todoBody: string;
   public todoCategory: string;
   public viewType: 'card' | 'list' = 'card';

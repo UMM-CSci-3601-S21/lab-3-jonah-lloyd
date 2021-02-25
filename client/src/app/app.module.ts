@@ -25,13 +25,15 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
 
 import { UserListComponent } from './users/user-list.component';
+import { TodoListComponent } from './todos/todo-list.component';
 import { HomeComponent } from './home/home.component';
 import { UserService } from './users/user.service';
+import { TodoService } from './todos/todo.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { UserCardComponent } from './users/user-card.component';
 import { UserProfileComponent } from './users/user-profile.component';
-import { TodoListComponent } from './todos/todo-list.component';
+
 
 const MATERIAL_MODULES: any[] = [
   MatListModule,
@@ -59,7 +61,6 @@ const MATERIAL_MODULES: any[] = [
     UserListComponent,
     UserCardComponent,
     UserProfileComponent,
-    TodosComponent,
     TodoListComponent,
   ],
   imports: [
@@ -73,7 +74,8 @@ const MATERIAL_MODULES: any[] = [
     LayoutModule,
   ],
   providers: [
-    UserService
+    UserService,
+    TodoService,
   ],
   bootstrap: [AppComponent]
 })
