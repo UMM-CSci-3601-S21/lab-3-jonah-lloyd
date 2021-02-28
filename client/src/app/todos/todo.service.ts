@@ -33,7 +33,9 @@ export class TodoService {
 
     // Filter by status
     if (filters.status) {
-      filteredTodos = filteredTodos.filter(todo => todo.status === filters.status);
+      const filtersStatusString = filters.status.toString();
+
+      filteredTodos = filteredTodos.filter(todo => todo.status.toString() === filtersStatusString);
     }
 
     // Filter by body
